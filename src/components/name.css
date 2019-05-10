@@ -1,0 +1,16 @@
+.createContact{
+	margin: 10px;
+	height: auto;
+	width:100px;
+}
+.submit{
+	margin-top: 10px;
+	height: 30px;
+	width:150px;
+	color: white;
+	border: 10px;
+	background-color: grey;
+}
+.inputName{
+
+}
