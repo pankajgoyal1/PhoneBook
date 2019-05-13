@@ -1,20 +1,21 @@
 import React from 'react';
+import './allContacts.css';
 const AllContacts =({contacts,removeContact,editContact})=>{
 	if(contacts.length>0)
 	{
 		return (
-			<div>
+			<div className='allContacts'>
 				{
-					contacts.map(function(contact,i)
+					contacts.map((contact,i)=>
 					{
-						if(i>0){
+						if(contact.name){
 							return(
-							<div className='' key={i}>
-								{contacts[i].name}
-								<p>{contacts[i].number}</p>
+							<div className='contact' key={i}>
+								<h3>Name: {contacts[i].name}
+								<p>Number: {contacts[i].number}</p></h3>
 								<div>
-								<button className='' onClick={editContact} id={contacts[i].id} >Edit</button>
-								<button className='' onClick={removeContact} id={contacts[i].id} >Delete</button>
+								<button className='edit' onClick={editContact} id={contacts[i].id} >Edit</button>
+								<button className='remove' onClick={removeContact} id={contacts[i].id} >Delete</button>
 								</div>
 							</div>
 							);
