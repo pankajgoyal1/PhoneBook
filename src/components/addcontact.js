@@ -19,27 +19,28 @@ class AddContact extends React.Component{
 		this.setState({number:event.target.value});
 	}
 	onAddContact=(event)=>{
-		if(this.state.name&&this.state.number)
+		if(this.state.name)
 		{
 		this.props.onSuccessfulAddition(this.state.name,this.state.number);
-		this.setState({submit:true,name:'',number:''});
+		this.setState({submit:true,name:''});
 		}
 	}
 	
 	render()
 	{
+		const style={
+			"width":"250px",
+			"height":"100px",
+			"word-break":"break-all",
+			"font-size":"15px"
+		}
 		return(
 			<div className='createContact'>
 				<div className='name'>
-				 Name<br />
-				 <input className='inputName' type='text' placeholder='Name' onChange={this.onNameChange} value={this.state.name} />
+				 <textarea className='inputName' style={style} type='text' placeholder='Write here....' onChange={this.onNameChange} value={this.state.name} />
 				</div>
-
-				<div className='number'>
-					Number<br /><input type='text' placeholder='Number' onChange={this.onNumberChange} value={this.state.number} />
-				</div>
-
-				<button className='submit' onClick={this.onAddContact} >Add Contact</button>
+				<br />
+				<button className='submit' onClick={this.onAddContact} >Create Post</button>
 			
 			</div>
 			

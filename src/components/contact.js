@@ -35,10 +35,6 @@ class AddContact extends React.Component{
 				 <input className='inputName' type='text' placeholder='Name' onChange={this.onNameChange} value={this.state.name} />
 				</div>
 
-				<div className='number'>
-					Number<br /><input type='text' placeholder='Number' onChange={this.onNumberChange} value={this.state.number} />
-				</div>
-
 				<button className='submit' onClick={this.onAddContact} >Add Contact</button>
 			
 			</div>
